@@ -15,7 +15,6 @@ The **Equipment Management System (EQMS)** is a desktop-based application design
 - [Usage](#-usage)
 - [Screenshots](#-screenshots)
 - [Future Improvements](#-future-improvements)
-- [Team Members](#-team-members)
 - [License](#-license)
 
 ---
@@ -140,3 +139,4 @@ The system helps organizations:
 This project was created for educational purposes under the **Software Engineering** course.
 
 © 2025 Group EQMS – All rights reserved.
+
