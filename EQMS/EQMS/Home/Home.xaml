@@ -1,0 +1,202 @@
+﻿<Page x:Class="EQMS.Home.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EQMS.Home"
+      mc:Ignorable="d" 
+      d:DesignHeight="610" d:DesignWidth="1100"
+      Title="Home"
+      DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
+    <!-- Home Panel -->
+    <DockPanel LastChildFill="True">
+        <!-- Top Panel -->
+        <StackPanel Margin="10" DockPanel.Dock="Top">
+            <TextBlock Text="Hello, Admin!" Foreground="#FF374957" FontWeight="Bold" FontSize="24" Margin="20,20,0,0"/>
+            <!-- Number of Reservations, Check-outs, and Maintenance -->
+            <Grid Margin="20,0,16,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- Reservations -->
+                <Border x:Name="Reservations" CornerRadius="10" Background="White" Padding="10" Margin="20,10,20,10" Width="300" Grid.Column="0" MaxWidth="400" MouseUp="Reservations_MouseUp" MouseEnter="Reservations_MouseEnter" MouseLeave="Reservations_MouseLeave">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.1" BlurRadius="10"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <!-- Reservations Label -->
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,0,20,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image x:Name="reservationImg" Source="/Resources/Img/reservationHomeBlue.png" Width="25" />
+                            <TextBlock x:Name="reservationTxt" Text="Reservations" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="16"/>
+                        </StackPanel>
+                        <!-- No. of Reservations -->
+                        <Grid Grid.Row="1" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- Booked Reservations-->
+                            <Grid Margin="0,0,50,0" Grid.Column="0" HorizontalAlignment="Right">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock x:Name="BookedNum" Text="0" Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="36" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="Booked" Text="Booked" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF7D94A6" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                            </Grid>
+                            <!-- Overdue Reservations-->
+                            <Grid Margin="50,0,0,0" Grid.Column="1" HorizontalAlignment="Left">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock x:Name="ReservationOverdueNum" Text="0" Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="36" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="ReservationOverdue" Text="Overdue" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF7D94A6" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <!-- Check-outs -->
+                <Border x:Name="Checkouts" CornerRadius="10" Background="White" Padding="10" Margin="20,10,20,10" Width="300" Grid.Column="1" MaxWidth="400" MouseUp="Checkouts_MouseUp" MouseEnter="Checkouts_MouseEnter" MouseLeave="Checkouts_MouseLeave">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.1" BlurRadius="10"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <!--Check-out Label -->
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image x:Name="checkoutImg" Source="/Resources/Img/checkoutHomeBlue.png" Width="25" />
+                            <TextBlock x:Name="checkoutTxt" Text="Check-outs" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="16"/>
+                        </StackPanel>
+                        <!-- No of Check-outs -->
+                        <Grid Grid.Row="1" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- Open Check-outs -->
+                            <Grid Margin="0,0,50,0" Grid.Column="0" HorizontalAlignment="Right" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock x:Name="OpenNum" Text="0" Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="36" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="Open" Text="Open" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF7D94A6" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                            </Grid>
+                            <!-- Overdue Check-outs -->
+                            <Grid Margin="50,0,0,0" Grid.Column="1" HorizontalAlignment="Left" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock x:Name="CheckoutOverdueNum" Text="0" Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="36" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="CheckoutOverdue" Text="Overdue" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF7D94A6" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <!-- Maintenance -->
+                <Border x:Name="Maintenance" CornerRadius="10" Background="White" Padding="10" Margin="20,10,20,10" Width="300" Grid.Column="2" MaxWidth="400" MouseEnter="Maintenance_MouseEnter" MouseLeave="Maintenance_MouseLeave">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.1" BlurRadius="10"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <!-- Maintenance Label -->
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,0,20,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image x:Name="maintenanceImg" Source="/Resources/Img/maintenanceBlue.png" Width="25" />
+                            <TextBlock x:Name="maintenanceTxt" Text="Maintenance" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="16"/>
+                        </StackPanel>
+                        <!-- No of Maintenance -->
+                        <Grid Grid.Row="1" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- Under Maintenance -->
+                            <Grid Margin="0,0,50,0" Grid.Column="0" HorizontalAlignment="Right">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock x:Name="inProgressNum" Text="0" Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="36" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="inProgress" Text="In Progress" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF7D94A6" FontWeight="DemiBold"  HorizontalAlignment="Center"/>
+                            </Grid>
+                            <!-- Booked Maintenance -->
+                            <Grid Margin="50,0,0,0" Grid.Column="1" HorizontalAlignment="Left">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock x:Name="maintenanceBookedNum" Text="0" Grid.Row="0" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF374957" FontWeight="Bold" FontSize="36" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="maintenanceBooked" Text="Booked" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF7D94A6" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </StackPanel>
+        
+        <!-- Center Panel -->
+        <Grid Margin="20,0,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!-- Title and Search Box -->
+            <DockPanel Grid.Row="0" LastChildFill="False">
+                <TextBlock Text="Orders" Foreground="#FF374957" FontSize="18" VerticalAlignment="Center" Margin="30,0,0,0" />
+                <!-- Search Box -->
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                    <Border x:Name="AddReservation" CornerRadius="10" Background="White" MinWidth="100" Height="30" Margin="5,5,20,5" VerticalAlignment="Center" BorderBrush="LightGray" BorderThickness="1" MouseUp="AddReservation_MouseUp" MouseEnter="AddReservation_MouseEnter" MouseLeave="AddReservation_MouseLeave">
+                        <TextBlock x:Name="AddReservationtxt" Text="Add Reservation" Margin="15,5,15,5" VerticalAlignment="Center" Foreground="#FF374957" FontWeight="Bold"/>
+                    </Border>
+                    <Border Style="{StaticResource searchBox}">
+                        <Grid VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="../Resources/Img/searchBlack.png" Grid.Column="1" HorizontalAlignment="Left" Width="24" Margin="10,0,5,0" />
+                            <TextBlock x:Name="textSearch" Text="Search..." Style="{StaticResource searchHint}"/>
+                            <TextBox x:Name="txtSearch" TextChanged="txtSearch_TextChanged" Style="{StaticResource  searchTextBox}"/>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </DockPanel>
+            
+            <!-- Home Data Grid -->
+            <DataGrid x:Name="homeDataGrid" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="1" MouseUp="homeDataGrid_MouseUp">
+                <DataGrid.Columns>
+                    <!-- ID Number Column -->
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" IsReadOnly="True" CanUserResize="False" Width="75"/>
+                    <!-- Name Column -->
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                    <!-- Type Column -->
+                    <DataGridTextColumn Header="Type" Binding="{Binding Type}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                    <!-- Start Date Column -->
+                    <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                    <!-- Return Date Column -->
+                    <DataGridTextColumn Header="Return Date" Binding="{Binding ReturnDate}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                    <!-- State Column -->
+                    <DataGridTextColumn Header="State" Binding="{Binding State}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                    <!-- Status Column -->
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Page>

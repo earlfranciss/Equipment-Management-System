@@ -1,0 +1,559 @@
+﻿<Page x:Class="EQMS.Details.CheckoutDetail.CheckoutDetails"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      xmlns:local="clr-namespace:EQMS.Details.CheckoutDetail"
+      mc:Ignorable="d" 
+      d:DesignHeight="530" d:DesignWidth="860"
+      Title="CheckoutDetails">
+
+
+    <Canvas>
+        <!-- Details Window-->
+        <StackPanel Name="Details" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Edit Details -->
+            <TextBlock Text="Checked-out Details" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" FontStyle="Italic" Margin="0,0,0,20" />
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <!-- Reservation ID  -->
+                    <StackPanel Margin="0,0,20,10">
+                        <TextBlock Text="Check-out ID" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="420" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/ID.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="CheckoutIDtxt" Text="Checkout ID Number" Style="{StaticResource detailsTxt}"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                    <!-- Status -->
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Status" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="420" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/equipmentBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="Statustxt" Text="Status" Style="{StaticResource textHint}"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <!-- Reservation Date  -->
+                    <StackPanel Margin="0,0,20,10">
+                        <TextBlock Text="Reservation Date" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="290" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/reservationBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="ReservationDatetxt" Text="Reservation Date" Style="{StaticResource detailsTxt}"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                    <!-- Borrown Date & Time -->
+                    <StackPanel Margin="0,0,20,10">
+                        <TextBlock Text="Borrow Date &amp; Time;" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="265" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/reservationBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="BorrowDatetxt" Text="Borrow Date" Style="{StaticResource detailsTxt}"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                    <!-- Return Date & Time -->
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Return Date &amp; Time" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="265" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/reservationBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="ReturnDatetxt" Text="Return Date" Style="{StaticResource detailsTxt}"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Equipment Details -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <StackPanel>
+                    <TextBlock Text="Equipment Details" FontSize="14" FontWeight="SemiBold" Margin="10,0,0,10" FontStyle="Italic"/>
+                    <StackPanel Margin="2,0,7,0" Orientation="Horizontal">
+                        <!-- Equipment ID Number -->
+                        <StackPanel Margin="0,0,10,5">
+                            <TextBlock Text="Equipment ID" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="280" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/ID.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="EquipmentIDtxt" Text="Equipment ID Number" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <!-- Equipment Name -->
+                        <StackPanel Margin="0,0,10,5">
+                            <TextBlock Text="Equipment Name" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="280" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/equipmentBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="EquipmentNametxt" Text="Equipment Name" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+
+                        <!-- Equipment Type -->
+                        <StackPanel Margin="0,0,0,5">
+                            <TextBlock Text="Equipment Type" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="280" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/typeBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="EquipmentTypetxt" Text="Equipment Type" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+            <!-- Borrower Details -->
+            <TextBlock Text="Borrower Details" FontSize="14" FontWeight="SemiBold" Margin="10,20,0,10" FontStyle="Italic"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <!-- Borrower ID Number -->
+                        <StackPanel Margin="0,0,15,0">
+                            <TextBlock Text="Borrower ID" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="270" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/ID.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="BorrowerIDtxt" Text="Borrower ID" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <!-- Borrower Name -->
+                        <StackPanel Margin="0,0,15,0">
+                            <TextBlock Text="Borrower Name" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="290" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/user.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="BorrowerNametxt" Text="Borrower Name" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+
+                        <!-- Borrower Role -->
+                        <StackPanel Margin="0,0,10,0">
+                            <TextBlock Text="Borrower Role" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="270" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/user.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="BorrowerRoletxt" Text="Borrower Role" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </StackPanel>
+
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" >
+                <StackPanel Orientation="Horizontal">
+                    <!-- Purpose -->
+                    <StackPanel Margin="0,5,5,10">
+                        <TextBlock Text="Purpose" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="470" Height="95" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Name="Purposetxt" Text="Purpose" TextWrapping="Wrap" Style="{StaticResource detailsTxt}" VerticalAlignment="Top"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel>
+                        <!-- Subject -->
+                        <StackPanel Margin="5,5,0,0">
+                            <TextBlock Text="Subject" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="250" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1" Padding="2,0,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="Subjecttxt" Text="Subject" Style="{StaticResource detailsTxt}" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+
+                        <!-- Professor -->
+                        <StackPanel Margin="5,5,0,0">
+                            <TextBlock Text="Professor" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="250" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1" Padding="2,0,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="Professortxt" Text="Professor" Style="{StaticResource detailsTxt}" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Edit & Delete Button -->
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0">
+                        <!-- Checkout Button -->
+                        <Border x:Name="ReturnBtn" CornerRadius="5" Background="#FF01D101" Margin="0,30,0,30" MinWidth="60" MinHeight="60" MouseUp="ReturnBtn_MouseUp" MouseEnter="ReturnBtn_MouseEnter" MouseLeave="ReturnBtn_MouseLeave">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/checkoutWhite.png" Grid.Column="0" Width="18" HorizontalAlignment="Center" Margin="5"/>
+                                <TextBlock Grid.Column="1" Text="Process Return" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="0,0,10,0"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+
+        <!-- Edit Panel -->
+        <StackPanel x:Name="EditDetails" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
+            <!-- Edit Details -->
+            <TextBlock Text="Checked-out Details" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" FontStyle="Italic" Margin="0,0,0,10" />
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <!-- Checkout ID  -->
+                    <StackPanel Margin="0,0,20,0">
+                        <TextBlock Text="Check-out ID" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="420" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/ID.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="editCheckoutIDtxt" Text="Check-out ID Number" Style="{StaticResource detailsTxt}"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                    <!-- Status -->
+                    <StackPanel Margin="0,0,0,0">
+                        <TextBlock Text="Status" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="420" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/equipmentBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                <ComboBox x:Name="editStatustext" SelectionChanged="editStatustext_SelectionChanged" Grid.Column="1" BorderThickness="0" Background="Transparent" BorderBrush="Transparent" Margin="2,2,5,2" IsEditable="true" IsReadOnly="True" IsTextSearchEnabled="False" VerticalAlignment="Center" SelectedIndex="0">
+                                    <ComboBoxItem>Completed</ComboBoxItem>
+                                    <ComboBoxItem>Open</ComboBoxItem>
+                                    <ComboBoxItem>Overdue</ComboBoxItem>
+                                </ComboBox>
+                            </Grid>
+                        </Border>
+                        <TextBlock x:Name="StatusError" Foreground="Red" Margin="40,0,0,0" FontSize="10"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <!-- Borrown Date & Time -->
+                    <StackPanel Margin="0,0,20,0">
+                        <TextBlock Text="Borrow Date &amp; Time;" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="265" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/reservationBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="editBorrowDatetxt" Text="Borrow Date" Style="{StaticResource detailsTxt}"/>
+                                <DatePicker x:Name="BorrowDate" Grid.Column="1" BorderBrush="{x:Null}" VerticalAlignment="Center" Margin="0,0,10,0" Focusable="False"/>
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <Grid>
+                                        <TextBlock x:Name="BorrowHourtxt" Text="00" Style="{StaticResource textHint}" Margin="3,0,5,0"/>
+                                        <TextBox x:Name="BorrowHour" TextChanged="BorrowHour_TextChanged" Style="{StaticResource textBox}" Margin="0,0,5,0" Focusable="False"/>
+                                    </Grid>
+                                    <TextBlock Text=":" VerticalAlignment="Center" Margin="0,0,3,0"/>
+                                    <Grid>
+                                        <TextBlock x:Name="BorrowMintxt" Text="00" Style="{StaticResource textHint}" Margin="3,0,5,0"/>
+                                        <TextBox x:Name="BorrowMin" TextChanged="BorrowMin_TextChanged" Style="{StaticResource textBox}" Margin="0,0,5,0" Focusable="False"/>
+                                    </Grid>
+                                    <ComboBox x:Name="BorrowAmPm" SelectionChanged="BorrowAmPm_SelectionChanged" Grid.Column="1" BorderThickness="0" Background="Transparent" BorderBrush="Transparent" Margin="2,2,5,2" IsEditable="true" IsReadOnly="True" IsTextSearchEnabled="False" VerticalAlignment="Center" SelectedIndex="0" Focusable="False">
+                                        <ComboBoxItem>am</ComboBoxItem>
+                                        <ComboBoxItem>pm</ComboBoxItem>
+                                    </ComboBox>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <TextBlock x:Name="BorrowError" Foreground="Red" Margin="40,0,0,0" FontSize="10"/>
+                    </StackPanel>
+                    <!-- Return Date & Time -->
+                    <StackPanel Margin="0,0,0,0">
+                        <TextBlock Text="Return Date &amp; Time" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="265" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/reservationBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="editReturnDatetxt" Text="Return Date" Style="{StaticResource detailsTxt}"/>
+                                <DatePicker x:Name="ReturnDate" Grid.Column="1" BorderBrush="{x:Null}" VerticalAlignment="Center" Margin="0,0,10,0" Focusable="False"/>
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <Grid>
+                                        <TextBlock x:Name="ReturnHourtxt" Text="00" Style="{StaticResource textHint}" Margin="3,0,5,0"/>
+                                        <TextBox x:Name="ReturnHour" TextChanged="ReturnHour_TextChanged" Style="{StaticResource textBox}" Margin="0,0,5,0" Focusable="False"/>
+                                    </Grid>
+                                    <TextBlock Text=":" VerticalAlignment="Center" Margin="0,0,3,0"/>
+                                    <Grid>
+                                        <TextBlock x:Name="ReturnMintxt" Text="00" Style="{StaticResource textHint}" Margin="3,0,5,0"/>
+                                        <TextBox x:Name="ReturnMin" TextChanged="ReturnMin_TextChanged" Style="{StaticResource textBox}" Margin="0,0,5,0" Focusable="False"/>
+                                    </Grid>
+                                    <ComboBox x:Name="ReturnAmPm" SelectionChanged="ReturnAmPm_SelectionChanged" Grid.Column="1" BorderThickness="0" Background="Transparent" BorderBrush="Transparent" Margin="2,2,5,2" IsEditable="true" IsReadOnly="True" IsTextSearchEnabled="False" VerticalAlignment="Center" SelectedIndex="0" Focusable="False">
+                                        <ComboBoxItem>am</ComboBoxItem>
+                                        <ComboBoxItem>pm</ComboBoxItem>
+                                    </ComboBox>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                    <!-- Completion Date & Time -->
+                    <StackPanel Margin="20,0,0,0">
+                        <TextBlock Text="Date &amp; Time Received" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="290" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Resources/Img/reservationBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                <TextBlock x:Name="CompletionDatetxt" Text="Return Date123" Style="{StaticResource detailsTxt}" Panel.ZIndex="0"/>
+                                <DatePicker x:Name="CompletionDate" Text=" " Grid.Column="1" BorderBrush="{x:Null}" VerticalAlignment="Center" Margin="0,0,10,0" />
+                            </Grid>
+                        </Border>
+                        <TextBlock x:Name="CompletionError" Foreground="Red" Margin="40,0,0,0" FontSize="10"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Equipment Details -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <StackPanel>
+                    <TextBlock Text="Equipment Details" FontSize="14" FontWeight="SemiBold" Margin="10,0,0,10" FontStyle="Italic" Foreground="DarkGray" HorizontalAlignment="Center"/>
+                    <StackPanel Margin="2,0,7,0" Orientation="Horizontal">
+                        <!-- Equipment ID Number -->
+                        <StackPanel Margin="0,0,10,0">
+                            <TextBlock Text="Equipment ID" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="280" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/ID.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="editEquipmentIDtxt" Text="Equipment ID Number" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <!-- Equipment Name -->
+                        <StackPanel Margin="0,0,10,0">
+                            <TextBlock Text="Equipment Name" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="280" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/equipmentBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="editEquipmentNametxt" Text="Equipment Name" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+
+                        <!-- Equipment Type -->
+                        <StackPanel Margin="0,0,0,0">
+                            <TextBlock Text="Equipment Type" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="280" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/typeBlue.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="editEquipmentTypetxt" Text="Equipment Type" Style="{StaticResource detailsTxt}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+            <!-- Borrower Details -->
+            <TextBlock Text="Equipment Condition" FontSize="14" FontWeight="SemiBold" Margin="10,10,0,10" FontStyle="Italic" HorizontalAlignment="Center" Foreground="DarkGray"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <!-- Condition -->
+                        <StackPanel Margin="0,0,20,0">
+                            <TextBlock Text="Condition" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="420" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/ID.png" Grid.Column="0" HorizontalAlignment="Left" Width="22" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="editConditiontxt" Text="Condition" Style="{StaticResource detailsTxt}"/>
+                                    <TextBox x:Name="editConditiontext" TextChanged="editConditiontext_TextChanged" Style="{StaticResource textBox}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <!-- Payment -->
+                        <StackPanel Margin="0,0,15,0">
+                            <TextBlock Text="Payment" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="400" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/user.png" Grid.Column="0" HorizontalAlignment="Left" Width="20" Height="24" Margin="10,0,5,0" />
+                                    <TextBlock x:Name="editPaymenttxt" Text="Payment" Style="{StaticResource detailsTxt}"/>
+                                    <TextBox x:Name="editPaymenttext" TextChanged="editPaymenttext_TextChanged" Style="{StaticResource textBox}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </StackPanel>
+
+
+
+            <StackPanel Orientation="Horizontal" >
+                <StackPanel Orientation="Horizontal">
+                    <!-- Description -->
+                    <StackPanel Margin="0,10,15,10">
+                        <TextBlock Text="Description" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border CornerRadius="10" Background="White" Width="420" Height="110" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1" Padding="5,0,0,0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Name="editDescriptiontxt" Text="Description" TextWrapping="Wrap" Style="{StaticResource detailsTxt}" VerticalAlignment="Top"/>
+                                <TextBox x:Name="editDescriptiontext" TextChanged="editDescriptiontext_TextChanged" TextWrapping="Wrap" Style="{StaticResource textBox}" VerticalAlignment="Top"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel>
+                        <!-- Payment Status -->
+                        <StackPanel Margin="5,10,0,10">
+                            <TextBlock Text="Payment Status" FontSize="12" FontFamily="Lato" FontWeight="Medium"  Foreground="Black" Background="{x:Null}"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Border CornerRadius="10" Background="White" Width="400" Height="35" Margin="0,5,0,0" BorderBrush="LightGray" BorderThickness="1" Padding="2,0,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="editPaymentStatustxt" Text="Payment Status" Style="{StaticResource detailsTxt}" VerticalAlignment="Center"/>
+                                    <ComboBox x:Name="editPaymentStatustext" SelectionChanged="editPaymentStatustext_SelectionChanged" Grid.Column="1" BorderThickness="0" Background="Transparent" BorderBrush="Transparent" Margin="2,2,5,2" IsEditable="true" IsReadOnly="True" IsTextSearchEnabled="False" VerticalAlignment="Center" SelectedIndex="0">
+                                        <ComboBoxItem>Paid</ComboBoxItem>
+                                        <ComboBoxItem>Unpaid</ComboBoxItem>
+                                    </ComboBox>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+
+                        <!-- Cancel & Save Button -->
+                        <StackPanel Margin="10,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <!-- Cancel Button -->
+                            <Border x:Name="CancelBtn" CornerRadius="5" Background="Gray"  MinWidth="160" MouseUp="CancelBtn_MouseUp" Margin="0,0,10,0" MinHeight="50" Padding="10,0,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/deleteWhite.png" Grid.Column="0" Width="18" HorizontalAlignment="Center" Margin="5"/>
+                                    <TextBlock Grid.Column="1" Text="Cancel Return" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="0,0,10,0"/>
+                                </Grid>
+                            </Border>
+                            <!-- Save Button -->
+                            <Border x:Name="SaveBtn" CornerRadius="5" Background="#0FA9FF" Margin="0,0,10,0" MinWidth="160" MouseUp="SaveBtn_MouseUp" MouseEnter="SaveBtn_MouseEnter" MouseLeave="SaveBtn_MouseLeave" Padding="10,0,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Resources/Img/editWhite.png" Grid.Column="0" Width="18" HorizontalAlignment="Center" Margin="5"/>
+                                    <TextBlock Grid.Column="1" Text="Receive Equipment" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Canvas>
+</Page>

@@ -1,0 +1,145 @@
+﻿<Window x:Class="EQMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EQMS"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="MainWindow" Height="700" Width="1200"
+        Icon="pack://application:,,,/Resources/Img/eqms.ico">    
+    
+    <!-- Main Panel -->
+    <Grid >
+        <!-- Background Color -->
+        <Border CornerRadius="20" Background="#DDE0EB"/>
+        <!-- Task Bar -->
+        <Border Height="30" VerticalAlignment="Top" MouseDown="Border_MouseDown" Panel.ZIndex="1" Background="White" Opacity="0" />
+        <StackPanel x:Name="TaskBar" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0" Height="30" VerticalAlignment="Top" Panel.ZIndex="2">
+            <!-- Minimize -->
+            <Image x:Name="btnMin" Source="/Resources/Img/minimizeBlack.png" MouseEnter="btnMin_MouseEnter" MouseLeave="btnMin_MouseLeave" MouseUp="btnMin_MouseUp" Width="20" Height="18" Margin="0,0,15,0"/>
+            <!-- Maximize -->
+            <Image x:Name="btnMax" Source="/Resources/Img/maximizeBlack.png" MouseEnter="btnMax_MouseEnter" MouseLeave="btnMax_MouseLeave" MouseUp="btnMax_MouseUp" Width="20" Height="20" Margin="0,0,15,0"/>
+            <!-- Exit -->
+            <Image x:Name="btnExit" Source="/Resources/Img/exitBlack.png" MouseEnter="btnExit_MouseEnter" MouseLeave="btnExit_MouseLeave" MouseUp="btnExit_MouseUp" Width="20" Height="20"/>
+        </StackPanel>
+
+        <!-- Main -->
+        <Border x:Name="mainPnl" CornerRadius="15" Background="#E9EBF4" Margin="0,30,0,0">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="90" ShadowDepth="5" Opacity="0.2" BlurRadius="20"/>
+            </Border.Effect>
+            <DockPanel x:Name="pnlMain" LastChildFill="True" >
+                <StackPanel x:Name="topNavBar" DockPanel.Dock="Top" Height="40">
+
+                </StackPanel>
+                <DockPanel x:Name="navBar" Width="60" Margin="0,20,0,30" >
+                    <StackPanel x:Name="leftNavBar" DockPanel.Dock="Top">
+                        <!-- Menu -->
+                        <Grid Height="50" Margin="0,0,0,10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="menu" Source="/Resources/Img/menuBlue.png" Grid.Column="0" Width="30" Panel.ZIndex="1" MouseUp="menu_MouseUp"/>
+                            <Image x:Name="returnMenu" Source="/Resources/Img/menuReturnBlue.png" Grid.Column="0" Width="25" Panel.ZIndex="1" MouseUp="returnMenu_MouseUp" Visibility="Hidden"/>
+                        </Grid>
+                        <!-- Home -->
+                        <Border x:Name="homeBtn" Height="50" Margin="0,0,0,5" MouseEnter="homeBtn_MouseEnter_1" MouseLeave="homeBtn_MouseLeave_1" MouseUp="homeBtn_MouseUp">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="home" Source="/Resources/Img/homeBlue.png" Width="20" Panel.ZIndex="1" Grid.Column="0" />
+                                <Ellipse x:Name="homeCircle" Width="40" Height="40" Grid.Column="0" Opacity="1" Fill="#FFE9EBF4"/>
+                                <TextBlock x:Name="txtHome" Text="Home" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                            </Grid>
+                        </Border>
+                        
+                        <!-- Reservation -->
+                        <Grid x:Name="reservationBtn" Height="50" Margin="0,0,0,5" MouseEnter="reservationBtn_MouseEnter" MouseLeave="reservationBtn_MouseLeave" MouseUp="reservationBtn_MouseUp">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="reservation" Source="/Resources/Img/reservationBlue.png" Grid.Column="0" Width="20" Panel.ZIndex="1"/>
+                            <Ellipse x:Name="reservationCircle" Grid.Column="0" Width="40" Height="40" Fill="#FFE9EBF4"/>
+                            <TextBlock x:Name="txtReservation" Text="Reservation" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                        </Grid>
+                        <!-- Check-outs -->
+                        <Grid x:Name="checkoutBtn" Height="50" Margin="0,0,0,5" MouseEnter="checkoutBtn_MouseEnter" MouseLeave="checkoutBtn_MouseLeave" MouseUp="checkoutBtn_MouseUp">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="checkout" Source="/Resources/Img/checkoutBlue.png" Grid.Column="0" Width="25" Panel.ZIndex="1"/>
+                            <Ellipse x:Name="checkoutCircle" Grid.Column="0" Width="40" Height="40" Fill="#FFE9EBF4"/>
+                            <TextBlock x:Name="txtCheckout" Text="Check-outs" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                        </Grid>
+                        <!-- Borrower -->
+                        <Grid x:Name="borrowerBtn" Height="50" Margin="0,0,0,5" MouseEnter="borrowerBtn_MouseEnter" MouseLeave="borrowerBtn_MouseLeave" MouseUp="borrowerBtn_MouseUp">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="borrower" Source="/Resources/Img/borrowerBlue.png" Grid.Column="0" Width="20" Panel.ZIndex="1" />
+                            <Ellipse x:Name="borrowerCircle" Grid.Column="0" Width="40" Height="40" Fill="#FFE9EBF4" />
+                            <TextBlock x:Name="txtBorrower" Text="Borrower" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                        </Grid>
+                        <!-- Equipment -->
+                        <Grid x:Name="equipmentBtn" Height="50" Margin="0,0,0,5" MouseEnter="equipmentBtn_MouseEnter" MouseLeave="equipmentBtn_MouseLeave" MouseUp="equipmentBtn_MouseUp">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="equipment" Source="/Resources/Img/equipmentBlue.png" Grid.Column="0" Width="20" Panel.ZIndex="1"/>
+                            <Ellipse x:Name="equipmentCircle" Grid.Column="0" Width="40" Height="40" Fill="#FFE9EBF4"/>
+                            <TextBlock x:Name="txtEquipment" Text="Equipment" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                        </Grid>
+                        <!-- Employee -->
+                        <Grid x:Name="employeeBtn" Height="50" Margin="0,0,0,5" MouseEnter="employeeBtn_MouseEnter" MouseLeave="employeeBtn_MouseLeave" MouseUp="employeeBtn_MouseUp">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="employee" Source="/Resources/Img/employeeBlue.png" Grid.Column="0" Width="30" Panel.ZIndex="1" />
+                            <Ellipse x:Name="employeeCircle" Grid.Column="0" Width="40" Height="40" Fill="#FFE9EBF4" />
+                            <TextBlock x:Name="txtEmployee" Text="Employee" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                        </Grid>
+                        <!-- Report -->
+                        <Grid x:Name="reportBtn" Height="50" Margin="0,0,0,5" MouseEnter="reportBtn_MouseEnter" MouseLeave="reportBtn_MouseLeave" MouseUp="reportBtn_MouseUp">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="report" Source="/Resources/Img/reportBlue.png" Grid.Column="0" Width="20" Panel.ZIndex="1"/>
+                            <Ellipse x:Name="reportCircle" Grid.Column="0" Width="40" Height="40" Fill="#FFE9EBF4"/>
+                            <TextBlock x:Name="txtReport" Text="Report" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                        </Grid>
+                    </StackPanel>
+                    <!-- Logout -->
+                    <Grid x:Name="logoutBtn" Height="50" Margin="0,0,0,10" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" MouseEnter="logoutBtn_MouseEnter" MouseLeave="logoutBtn_MouseLeave" MouseUp="logoutBtn_MouseUp">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="logout" Source="/Resources/Img/logoutBlue.png" Grid.Column="0" Width="20" Panel.ZIndex="1"/>
+                        <TextBlock x:Name="txtLogout" Text="Logout" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF374957"/>
+                    </Grid>
+                </DockPanel>
+                
+                
+                <!-- Center Panel-->
+                <Border CornerRadius="10" Background="#F2F5FA" Margin="0,0,15,15" >
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="0" Opacity="0.2" BlurRadius="50"/>
+                    </Border.Effect>
+                    <Frame x:Name="Main" NavigationUIVisibility="Hidden" />
+
+                </Border>
+
+            </DockPanel>
+        </Border>
+
+    </Grid>
+</Window>

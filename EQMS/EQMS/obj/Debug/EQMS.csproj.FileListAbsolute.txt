@@ -1,0 +1,131 @@
+D:\VisualStudio\EQMS\EQMS\bin\Debug\EQMS.exe.config
+D:\VisualStudio\EQMS\EQMS\bin\Debug\EQMS.exe
+D:\VisualStudio\EQMS\EQMS\bin\Debug\EQMS.pdb
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.csproj.AssemblyReference.cache
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.csproj.SuggestedBindingRedirects.cache
+D:\VisualStudio\EQMS\EQMS\obj\Debug\LoginReg.g.cs
+D:\VisualStudio\EQMS\EQMS\obj\Debug\MainWindow.g.cs
+D:\VisualStudio\EQMS\EQMS\obj\Debug\App.g.cs
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS_MarkupCompile.cache
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS_MarkupCompile.lref
+D:\VisualStudio\EQMS\EQMS\obj\Debug\LoginReg.baml
+D:\VisualStudio\EQMS\EQMS\obj\Debug\MainWindow.baml
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.g.resources
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.Properties.Resources.resources
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.csproj.GenerateResource.cache
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.csproj.CoreCompileInputs.cache
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.exe
+D:\VisualStudio\EQMS\EQMS\obj\Debug\EQMS.pdb
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.csproj.AssemblyReference.cache
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Authentication\LoginReg.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Borrower\Borrower.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Checkout\Checkout.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\BorrowerDetail\BorrowerDetails.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\CheckoutDetail\CheckoutDetails.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\DetailWindow.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\EmployeeDetail\EmployeeDetails.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\EquipmentDetail\EquipmentDetails.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\ReservationDetail\ReservationDetails.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Employee\Employee.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Equipment\Equipment.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Home\Home.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\MainWindow.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Report\Report.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Reservation\Reservation.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\App.g.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS_MarkupCompile.cache
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS_MarkupCompile.lref
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\EQMS.exe.config
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\EQMS.exe
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\EQMS.pdb
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Bold.Licensing.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\BoldReports.WPF.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\ControlzEx.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\LiveCharts.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\LiveCharts.Wpf.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\MahApps.Metro.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Newtonsoft.Json.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Chart.WPF.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Compression.Base.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.DocIO.Base.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Gauge.WPF.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Grid.WPF.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.GridCommon.WPF.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Licensing.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Linq.Base.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.OfficeChart.Base.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Pdf.Base.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Presentation.Base.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.SfMaps.WPF.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Shared.WPF.Classic.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Shared.WPF.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.XlsIO.Base.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\BoldReports.WPF.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\ControlzEx.pdb
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\ControlzEx.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\LiveCharts.pdb
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\LiveCharts.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\LiveCharts.Wpf.pdb
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\LiveCharts.Wpf.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\MahApps.Metro.pdb
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\MahApps.Metro.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Newtonsoft.Json.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Chart.WPF.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Compression.Base.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.DocIO.Base.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Gauge.WPF.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Grid.WPF.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.GridCommon.WPF.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Linq.Base.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.OfficeChart.Base.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Pdf.Base.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Presentation.Base.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.SfMaps.WPF.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Shared.WPF.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.Shared.WPF.Classic.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\Syncfusion.XlsIO.Base.xml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\de\MahApps.Metro.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\App.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Authentication\LoginReg.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Borrower\Borrower.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Checkout\Checkout.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\BorrowerDetail\BorrowerDetails.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\CheckoutDetail\CheckoutDetails.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\DetailWindow.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\EmployeeDetail\EmployeeDetails.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\EquipmentDetail\EquipmentDetails.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Details\ReservationDetail\ReservationDetails.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Employee\Employee.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Equipment\Equipment.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Home\Home.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\MainWindow.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Report\Report.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\Reservation\Reservation.baml
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.g.resources
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.Properties.Resources.resources
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.csproj.GenerateResource.cache
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.csproj.CoreCompileInputs.cache
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.csproj.Up2Date
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.exe
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\EQMS.pdb

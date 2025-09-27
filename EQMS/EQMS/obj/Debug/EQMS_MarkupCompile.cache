@@ -1,0 +1,20 @@
+﻿EQMS
+
+
+winexe
+C#
+.cs
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\obj\Debug\
+EQMS
+none
+false
+DEBUG;TRACE
+D:\EQMS GitHub\SOFTENG32\EQMS\EQMS\App.xaml
+15-159543214
+
+50388848447
+46-1510499024
+Authentication\LoginReg.xaml;Borrower\Borrower.xaml;Checkout\Checkout.xaml;Details\BorrowerDetail\BorrowerDetails.xaml;Details\CheckoutDetail\CheckoutDetails.xaml;Details\DetailWindow.xaml;Details\EmployeeDetail\EmployeeDetails.xaml;Details\EquipmentDetail\EquipmentDetails.xaml;Details\ReservationDetail\ReservationDetails.xaml;Employee\Employee.xaml;Equipment\Equipment.xaml;Home\Home.xaml;MainWindow.xaml;Report\Report.xaml;Reservation\Reservation.xaml;
+
+False
+

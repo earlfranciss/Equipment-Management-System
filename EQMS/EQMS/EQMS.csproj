@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EDD0E8B-2691-4932-AC91-60456701729D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EQMS</RootNamespace>
+    <AssemblyName>EQMS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Img\eqms.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bold.Licensing, Version=6.1460.36.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bold.Licensing.6.1.36\lib\net46\Bold.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="BoldReports.WPF, Version=6.1460.36.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\BoldReports.WPF.6.1.36\lib\net46\BoldReports.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.2.4.10\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="Syncfusion.Chart.WPF, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Chart.WPF.Classic.22.1.34\lib\net46\Syncfusion.Chart.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.22.1.34\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.DocIO.Wpf.22.1.34\lib\net46\Syncfusion.DocIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Gauge.WPF, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Gauge.WPF.22.1.34\lib\net46\Syncfusion.Gauge.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.WPF, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.WPF.22.1.34\lib\net46\Syncfusion.Grid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.WPF, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.GridCommon.Wpf.22.1.34\lib\net46\Syncfusion.GridCommon.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.22.1.34\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Linq.Base, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Linq.Base.22.1.34\lib\net46\Syncfusion.Linq.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Base, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.OfficeChart.Base.22.1.34\lib\net46\Syncfusion.OfficeChart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.Wpf.22.1.34\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Presentation.Base, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Presentation.Wpf.22.1.34\lib\net46\Syncfusion.Presentation.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaps.WPF, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfMaps.WPF.22.1.34\lib\net46\Syncfusion.SfMaps.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.22.1.34\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF.Classic, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.Classic.22.1.34\lib\net46\Syncfusion.Shared.WPF.Classic.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=22.1460.34.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.XlsIO.Wpf.22.1.34\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Borrower\BorrowerDAO.cs" />
+    <Compile Include="Borrower\BorrowerViewModel.cs" />
+    <Compile Include="Checkout\Checkout.xaml.cs">
+      <DependentUpon>Checkout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutDAO.cs" />
+    <Compile Include="Checkout\CheckoutViewModel.cs" />
+    <Compile Include="DatabaseManager\dbm.cs" />
+    <Compile Include="Details\BorrowerDetail\BorrowerDetailDA.cs" />
+    <Compile Include="Details\BorrowerDetail\BorrowerDetails.xaml.cs">
+      <DependentUpon>BorrowerDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\BorrowerDetail\BorrowerDetailVM.cs" />
+    <Compile Include="Details\CheckoutDetail\CheckoutDetailDA.cs" />
+    <Compile Include="Details\CheckoutDetail\CheckoutDetails.xaml.cs">
+      <DependentUpon>CheckoutDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\CheckoutDetail\CheckoutDetailVM.cs" />
+    <Compile Include="Details\DetailWindow.xaml.cs">
+      <DependentUpon>DetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\EmployeeDetail\EmployeeDetailDA.cs" />
+    <Compile Include="Details\EmployeeDetail\EmployeeDetails.xaml.cs">
+      <DependentUpon>EmployeeDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\EmployeeDetail\EmployeeDetailVM.cs" />
+    <Compile Include="Details\EquipmentDetail\EquipmentDetailDA.cs" />
+    <Compile Include="Details\EquipmentDetail\EquipmentDetails.xaml.cs">
+      <DependentUpon>EquipmentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\EquipmentDetail\EquipmentDetailVM.cs" />
+    <Compile Include="Details\ReservationDetail\ReservationDetailDA.cs" />
+    <Compile Include="Details\ReservationDetail\ReservationDetails.xaml.cs">
+      <DependentUpon>ReservationDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\ReservationDetail\ReservationDetailVM.cs" />
+    <Compile Include="Employee\EmployeeDAO.cs" />
+    <Compile Include="Employee\EmployeeViewModel.cs" />
+    <Compile Include="Equipment\EquipmentDAO.cs" />
+    <Compile Include="Equipment\EquipmentViewModel.cs" />
+    <Compile Include="Report\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDAO.cs" />
+    <Compile Include="Report\ReportViewModel.cs" />
+    <Compile Include="Reservation\Reservation.xaml.cs">
+      <DependentUpon>Reservation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation\ReservationDAO.cs" />
+    <Compile Include="Reservation\ReservationViewModel.cs" />
+    <Page Include="Authentication\LoginReg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Borrower\Borrower.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Checkout\Checkout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\BorrowerDetail\BorrowerDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\CheckoutDetail\CheckoutDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\DetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\EmployeeDetail\EmployeeDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\EquipmentDetail\EquipmentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\ReservationDetail\ReservationDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\Employee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Equipment\Equipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Authentication\ChangePassword\CPDAO.cs" />
+    <Compile Include="Authentication\ChangePassword\CPViewModel.cs" />
+    <Compile Include="Authentication\Login\LoginDAO.cs" />
+    <Compile Include="Authentication\Login\LoginViewModel.cs" />
+    <Compile Include="Authentication\Register\RegDAO.cs" />
+    <Compile Include="Authentication\Register\RegViewModel.cs" />
+    <Compile Include="Borrower\Borrower.xaml.cs">
+      <DependentUpon>Borrower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\LoginReg.xaml.cs">
+      <DependentUpon>LoginReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee.xaml.cs">
+      <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment\Equipment.xaml.cs">
+      <DependentUpon>Equipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home\HomeDAO.cs" />
+    <Compile Include="Home\HomeViewModel.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Report\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reservation\Reservation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Resources\FontStyles\Lato\Lato-Black.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-BlackItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-Thin.ttf" />
+    <Resource Include="Resources\FontStyles\Lato\Lato-ThinItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\OpenSans-Italic-VariableFont_wdth,wght.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\OpenSans-VariableFont_wdth,wght.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_Condensed-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Open_Sans\static\OpenSans_SemiCondensed-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\SourceSerif4-Italic-VariableFont_opsz,wght.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\SourceSerif4-VariableFont_opsz,wght.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-Black.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-BlackItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-ExtraLight.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-Black.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-BlackItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-ExtraLight.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_18pt-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-Black.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-BlackItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-ExtraLight.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_36pt-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-Black.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-BlackItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-ExtraLight.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\static\SourceSerif4_48pt-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-Black.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-BlackItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-Bold.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-BoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-ExtraBold.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-ExtraLight.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-Italic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-Light.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-LightItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-Medium.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-MediumItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-Regular.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-SemiBold.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-Thin.ttf" />
+    <Resource Include="Resources\FontStyles\Poppins\Poppins-ThinItalic.ttf" />
+    <None Include="Directory.Build.props" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\exitBlack.png" />
+    <Resource Include="Resources\Img\exitRed.png" />
+    <Resource Include="Resources\Img\exitWhite.png" />
+    <Resource Include="Resources\Img\uclm-936.jpeg" />
+    <Resource Include="Resources\Img\uclm.jpeg" />
+    <Resource Include="Resources\Img\UCLM_BG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\minimizeBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\minimizeRed.png" />
+    <Resource Include="Resources\Img\minimizeWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FontStyles\Open_Sans\OFL.txt" />
+    <Resource Include="Resources\FontStyles\Open_Sans\README.txt" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\OFL.txt" />
+    <Resource Include="Resources\FontStyles\Source_Serif_4\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FontStyles\Poppins\OFL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\ID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\hidePassword.png" />
+    <Resource Include="Resources\Img\showPassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\checkoutBlack.png" />
+    <Resource Include="Resources\Img\checkoutBlue.png" />
+    <Resource Include="Resources\Img\checkoutWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\maximizeBlack.png" />
+    <Resource Include="Resources\Img\maximizeRed.png" />
+    <Resource Include="Resources\Img\maximizeWhite.png" />
+    <Resource Include="Resources\Img\restoreBlack.png" />
+    <Resource Include="Resources\Img\restoreRed.png" />
+    <Resource Include="Resources\Img\restoreWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\menuBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\borrowerBlue.png" />
+    <Resource Include="Resources\Img\borrowerWhite.png" />
+    <Resource Include="Resources\Img\equipmentBlue.png" />
+    <Resource Include="Resources\Img\equipmentWhite.png" />
+    <Resource Include="Resources\Img\homeBlue.png" />
+    <Resource Include="Resources\Img\homeWhite.png" />
+    <Resource Include="Resources\Img\logoutBlue.png" />
+    <Resource Include="Resources\Img\menuReturnBlue.png" />
+    <Resource Include="Resources\Img\menuReturnWhite.png" />
+    <Resource Include="Resources\Img\menuWhite.png" />
+    <Resource Include="Resources\Img\reportBlue.png" />
+    <Resource Include="Resources\Img\reportWhite.png" />
+    <Resource Include="Resources\Img\reservationBlue.png" />
+    <Resource Include="Resources\Img\reservationWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\menuBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\logoutRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\reservationHomeBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\checkoutHomeBlack.png" />
+    <Resource Include="Resources\Img\checkoutHomeBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\maintenanceBlack.png" />
+    <Resource Include="Resources\Img\maintenanceBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\reservationHomeBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\searchBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\employeeBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\employeeWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\deleteRed.png" />
+    <Resource Include="Resources\Img\deleteWhite.png" />
+    <Resource Include="Resources\Img\editRed.png" />
+    <Resource Include="Resources\Img\editWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\userEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\brandBlue.png" />
+    <Resource Include="Resources\Img\brandWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\serialBlue.png" />
+    <Resource Include="Resources\Img\serialWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\typeBlue.png" />
+    <Resource Include="Resources\Img\typeWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\checkoutHomeWhite.png" />
+    <Resource Include="Resources\Img\maintenanceHomeWhite.png" />
+    <Resource Include="Resources\Img\reservationHomeWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\tlogo eqms.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tlogo eqms.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Img\eqms.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

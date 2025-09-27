@@ -1,0 +1,50 @@
+﻿<Page x:Class="EQMS.Borrower.Borrower"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EQMS.Borrower"
+      mc:Ignorable="d" 
+      d:DesignHeight="610" d:DesignWidth="1100" 
+      Title="Borrower">
+
+    <!-- Center Panel -->
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Title and Search Box -->
+        <DockPanel Grid.Row="0" LastChildFill="False">
+            <TextBlock Text="Borrower" Foreground="#FF374957" FontSize="18" VerticalAlignment="Center" Margin="30,0,0,0" />
+            <!-- Search Box -->
+            <Border Style="{StaticResource searchBox}" DockPanel.Dock="Right">
+                <Grid VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="../Resources/Img/searchBlack.png" Grid.Column="1" HorizontalAlignment="Left" Width="24" Margin="10,0,5,0" />
+                    <TextBlock x:Name="textSearch" Text="Search..." Style="{StaticResource searchHint}"/>
+                    <TextBox x:Name="txtSearch" TextChanged="txtSearch_TextChanged" Style="{StaticResource  searchTextBox}"/>
+                </Grid>
+            </Border>
+        </DockPanel>
+
+        <!-- Home Data Grid -->
+        <DataGrid x:Name="BorrowerDataGrid" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="1" MouseUp="BorrowerDataGrid_MouseUp">
+            <DataGrid.Columns>
+                <!-- ID Number Column -->
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" IsReadOnly="True" CanUserResize="False" Width="100"/>
+                <!-- Name Column -->
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                <!-- Role Column -->
+                <DataGridTextColumn Header="Role" Binding="{Binding Role}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                <!-- Email Column -->
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+                <!-- Phone Column -->
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" IsReadOnly="True" CanUserResize="False" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

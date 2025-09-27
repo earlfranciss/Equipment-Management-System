@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|d:\\eqms github\\softeng32\\eqms\\eqms\\details\\reservationdetail\\reservationdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|solutionrelative:eqms\\details\\reservationdetail\\reservationdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|D:\\EQMS GitHub\\SOFTENG32\\EQMS\\eqms\\details\\reservationdetail\\reservationdetailda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|solutionrelative:eqms\\details\\reservationdetail\\reservationdetailda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|D:\\EQMS GitHub\\SOFTENG32\\EQMS\\eqms\\equipment\\equipment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|solutionrelative:eqms\\equipment\\equipment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|D:\\EQMS GitHub\\SOFTENG32\\EQMS\\eqms\\equipment\\equipment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|solutionrelative:eqms\\equipment\\equipment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|D:\\EQMS GitHub\\SOFTENG32\\EQMS\\eqms\\equipment\\equipmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|solutionrelative:eqms\\equipment\\equipmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|D:\\EQMS GitHub\\SOFTENG32\\EQMS\\eqms\\equipment\\equipmentdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDD0E8B-2691-4932-AC91-60456701729D}|EQMS\\EQMS.csproj|solutionrelative:eqms\\equipment\\equipmentdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EquipmentDAO.cs",
+              "DocumentMoniker": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\EquipmentDAO.cs",
+              "RelativeDocumentMoniker": "EQMS\\Equipment\\EquipmentDAO.cs",
+              "ToolTip": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\EquipmentDAO.cs",
+              "RelativeToolTip": "EQMS\\Equipment\\EquipmentDAO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T06:50:51.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EquipmentViewModel.cs",
+              "DocumentMoniker": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\EquipmentViewModel.cs",
+              "RelativeDocumentMoniker": "EQMS\\Equipment\\EquipmentViewModel.cs",
+              "ToolTip": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\EquipmentViewModel.cs",
+              "RelativeToolTip": "EQMS\\Equipment\\EquipmentViewModel.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwDoAAAA9BQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T06:50:49.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Equipment.xaml.cs",
+              "DocumentMoniker": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\Equipment.xaml.cs",
+              "RelativeDocumentMoniker": "EQMS\\Equipment\\Equipment.xaml.cs",
+              "ToolTip": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\Equipment.xaml.cs",
+              "RelativeToolTip": "EQMS\\Equipment\\Equipment.xaml.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAUwDQAAAB+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T03:56:01.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Equipment.xaml",
+              "DocumentMoniker": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\Equipment.xaml",
+              "RelativeDocumentMoniker": "EQMS\\Equipment\\Equipment.xaml",
+              "ToolTip": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Equipment\\Equipment.xaml",
+              "RelativeToolTip": "EQMS\\Equipment\\Equipment.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-20T03:55:45.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReservationDetailDA.cs",
+              "DocumentMoniker": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Details\\ReservationDetail\\ReservationDetailDA.cs",
+              "RelativeDocumentMoniker": "EQMS\\Details\\ReservationDetail\\ReservationDetailDA.cs",
+              "ToolTip": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Details\\ReservationDetail\\ReservationDetailDA.cs",
+              "RelativeToolTip": "EQMS\\Details\\ReservationDetail\\ReservationDetailDA.cs",
+              "ViewState": "AQIAAEoBAAAAAAAAAAAmwJ8BAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T00:29:48.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservationDetailVM.cs",
+              "DocumentMoniker": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Details\\ReservationDetail\\ReservationDetailVM.cs",
+              "RelativeDocumentMoniker": "EQMS\\Details\\ReservationDetail\\ReservationDetailVM.cs",
+              "ToolTip": "D:\\EQMS GitHub\\SOFTENG32\\EQMS\\EQMS\\Details\\ReservationDetail\\ReservationDetailVM.cs",
+              "RelativeToolTip": "EQMS\\Details\\ReservationDetail\\ReservationDetailVM.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAmwOYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T05:05:07.124Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

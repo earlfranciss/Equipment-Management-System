@@ -1,0 +1,25 @@
+﻿<Window x:Class="EQMS.Details.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EQMS.Details"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="DetailWindow" Height="600" Width="450">
+    <Grid>
+        <!-- Background Color -->
+        <Border CornerRadius="20" Background="#F2F5FA" BorderBrush="LightGray" BorderThickness="1"/>
+        <!-- Task Bar -->
+        <Border Height="30" VerticalAlignment="Top" MouseDown="Border_MouseDown" Panel.ZIndex="1" Background="White" Opacity="0" />
+        <StackPanel x:Name="TaskBar" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0" Height="30" VerticalAlignment="Top" Panel.ZIndex="2">
+            <!-- Minimize -->
+            <Image x:Name="btnMin" Source="/Resources/Img/minimizeBlack.png" MouseEnter="btnMin_MouseEnter" MouseLeave="btnMin_MouseLeave" MouseUp="btnMin_MouseUp" Width="18" Height="15" Margin="0,0,15,0"/>
+            <!-- Exit -->
+            <Image x:Name="btnExit" Source="/Resources/Img/exitBlack.png" MouseEnter="btnExit_MouseEnter" MouseLeave="btnExit_MouseLeave" MouseUp="btnExit_MouseUp" Width="18"/>
+        </StackPanel>
+        <Border x:Name="mainPnl" Background="transparent" Margin="0,30,0,0">
+            <Frame x:Name="Main" NavigationUIVisibility="Hidden" Margin="20"/>
+        </Border>
+
+    </Grid>
+</Window>

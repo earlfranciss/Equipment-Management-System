@@ -1,0 +1,123 @@
+﻿<Page x:Class="EQMS.Report.Report"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EQMS.Report"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="610" d:DesignWidth="1100"
+      Title="Report">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!-- Most Used Equipment -->
+            <Border CornerRadius="10" Grid.Row="0" Background="White" BorderBrush="LightGray" BorderThickness="1"  MinHeight="270" MinWidth="800" Margin="20,20,10,10">
+                <DockPanel LastChildFill="True">
+                    <TextBlock Text="Most Used Equipment" DockPanel.Dock="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic" Margin="0,20,0,0" Foreground="DarkGray" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <lvc:CartesianChart Series="{Binding Values}" LegendLocation="None" Margin="10,10,10,10">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="Equipment" Labels="{Binding Labels}" Foreground="#FF767676">
+                                <lvc:Axis.Separator>
+                                    <lvc:Separator StrokeThickness="0" Step="1"/>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Title="Total Count" MinValue="0" Foreground="#FF767676">
+                                <lvc:Axis.Separator >
+                                    <lvc:Separator StrokeThickness="1"/>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+                </DockPanel>
+            </Border>
+
+
+
+            <Border CornerRadius="10" Grid.Row="1" Background="White" BorderBrush="LightGray" BorderThickness="1" MinHeight="270" MinWidth="800" Margin="20,5,10,20">
+                <DockPanel LastChildFill="True">
+                    <TextBlock Text="Number of Reservations" DockPanel.Dock="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic" Margin="0,20,0,0" Foreground="DarkGray" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <lvc:CartesianChart LegendLocation="None" Margin="10 40 10 10">
+                        <lvc:CartesianChart.DataTooltip>
+                            <lvc:DefaultTooltip Background="#24336a" Foreground="#d5e2ff"/>
+                        </lvc:CartesianChart.DataTooltip>
+
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Foreground="#FF767676" ShowLabels="True" Labels="{Binding Label}">
+                                <lvc:Axis.Separator>
+                                    <lvc:Separator StrokeThickness="0" Step="1"/>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisX>
+
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Foreground="#FF767676" ShowLabels="True" MinValue="0">
+                                <lvc:Axis.Separator>
+                                    <lvc:Separator StrokeThickness="1"/>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisY>
+
+                        <lvc:CartesianChart.Series>
+                            <lvc:LineSeries Title="Total Reservations" Values="{Binding SeriesCollection[0].Values}" Stroke="#6860e6" PointGeometrySize="8">
+                                <lvc:LineSeries.Fill>
+                                    <SolidColorBrush Color="#FF2E3966" Opacity="0.7"/>
+                                </lvc:LineSeries.Fill>
+                            </lvc:LineSeries>
+                        </lvc:CartesianChart.Series>
+                    </lvc:CartesianChart>
+                </DockPanel>
+            </Border>
+        </Grid>
+        <!-- Graphs -->
+        
+
+        
+        <DockPanel Grid.Column="1" MinHeight="610" MinWidth="250" LastChildFill="True">
+            <!-- Number of Uses per Equipment -->
+            <Border CornerRadius="10" Background="White" BorderBrush="LightGray" BorderThickness="1" DockPanel.Dock="Top"  Margin="10,20,20,10">
+                <StackPanel>
+                    <TextBlock Text="Number of Uses per Equipment" DockPanel.Dock="Top" TextWrapping="Wrap" FontSize="16" FontWeight="Bold" FontStyle="Italic" Margin="0,20,0,20" Foreground="DarkGray" HorizontalAlignment="Center" Width="143" TextAlignment="Center"/>
+                    <DockPanel>
+                        <TextBlock x:Name="txtTotalCount" DockPanel.Dock="Right" Margin="0,0,50,0" FontSize="14" LineHeight="40" FontWeight="Bold" Foreground="#FF676767"/>
+                        <TextBlock x:Name="txtEquipmentName" Margin="40,0,0,0" HorizontalAlignment="Left" FontSize="14" LineHeight="40" FontWeight="Bold" Foreground="#FF676767"/>
+
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Recently Borrowed -->
+            <Border CornerRadius="10" Background="White" BorderBrush="LightGray" BorderThickness="1" Height="auto" Margin="10,5,20,20" >
+                <StackPanel>
+                    <TextBlock Text="Recently Borrowed" DockPanel.Dock="Top" TextWrapping="Wrap" FontSize="16" FontWeight="Bold" FontStyle="Italic" Margin="0,20,0,20" Foreground="DarkGray" HorizontalAlignment="Center" Width="143" TextAlignment="Center"/>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Right" Margin="0,0,20,0">
+                            <TextBlock x:Name="txtReservationDate1" FontSize="14" FontWeight="Bold" Foreground="#FF676767"/>
+                            <TextBlock x:Name="txtReservationDate2" FontSize="14" FontWeight="Bold" Foreground="#FF676767" Margin="0,10,0,10"/>
+                            <TextBlock x:Name="txtReservationDate3" FontSize="14" FontWeight="Bold" Foreground="#FF676767"/>
+                        </StackPanel>
+                        <StackPanel Margin="20,0,0,0" HorizontalAlignment="Left" >
+                            <TextBlock x:Name="txtEquipmentName1" FontSize="14" FontWeight="Bold" Foreground="#FF676767"/>
+                            <TextBlock x:Name="txtEquipmentName2" FontSize="14"  FontWeight="Bold" Foreground="#FF676767" Margin="0,10,0,10"/>
+                            <TextBlock x:Name="txtEquipmentName3" FontSize="14" FontWeight="Bold" Foreground="#FF676767"/>
+                        </StackPanel>
+                        
+
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+
+
+        </DockPanel>
+    </Grid>
+</Page>
