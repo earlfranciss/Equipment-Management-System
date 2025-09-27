@@ -71,8 +71,8 @@ The system helps organizations:
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/your-username/equipment-management-system.git
-   cd equipment-management-system
+   git clone https://github.com/earlfranciss/Equipment-Management-System.git
+   cd Equipment-Management-System
 ````
 2. **Set up the database**
 
@@ -139,4 +139,5 @@ The system helps organizations:
 This project was created for educational purposes under the **Software Engineering** course.
 
 © 2025 Group EQMS – All rights reserved.
+
 
